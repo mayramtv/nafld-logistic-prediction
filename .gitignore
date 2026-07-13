@@ -1,0 +1,7 @@
+nafld_env/
+__pycache__/
+.ipynb_checkpoints/
+requirements_full.txt
+report/Original_Report_NAFLD.pdf
+Original_Analysis.ipynb
+data/nafld1.csv
