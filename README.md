@@ -8,7 +8,7 @@
 > Machine Learning classification project that predicts patient survival outcomes using clinical data from individuals diagnosed with Non-Alcoholic Fatty Liver Disease (NAFLD).
 
 <p align="center">
-<img src="./images/workflow.png" width="800" alt="Sustainability NLP pipeline overview">
+<img src="./images/workflow.png" width="80%" alt="Workflow">
 </p>
 ---
 
@@ -87,7 +87,7 @@ Target variable:
 
 The original dataset is included in the repository for reproducibility.
 <p align="center">
-<img src="./images/distribution.png" width="800" alt="Sustainability NLP pipeline overview">
+<img src="./images/distribution.png" width="50%" alt="Distribution">
 </p>
 
 ---
@@ -106,9 +106,6 @@ The original dataset is included in the repository for reproducibility.
 - Precision–Recall Curve
 - Feature Importance visualization
 
-<p align="center">
-<img src="./images/confusion_matrix.png" width="800" alt="Sustainability NLP pipeline overview"><img src="./images/roc_curve.png" width="800" alt="Sustainability NLP pipeline overview">
-</p>
 <p align="center">
   <img src="./images/confusion_matrix.png" width="33%" alt="Confusion Matrix">
   <img src="./images/roc_curve.png" width="33%" alt="ROC Curve">
