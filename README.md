@@ -107,9 +107,9 @@ The original dataset is included in the repository for reproducibility.
 - Feature Importance visualization
 
 <p align="center">
-  <img src="./images/confusion_matrix.png" width="33%" alt="Confusion Matrix">
-  <img src="./images/roc_curve.png" width="33%" alt="ROC Curve">
-  <img src="./images/feature_importance.png" width="33%" alt="Feature Importance">
+  <img src="./images/confusion_matrix.png" width="31%" alt="Confusion Matrix">
+  <img src="./images/roc_curve.png" width="31%" alt="ROC Curve">
+  <img src="./images/feature_importance.png" width="31%" alt="Feature Importance">
 </p>
 
 ---
