@@ -57,15 +57,17 @@ flowchart TD
     Modeling --> Evaluation
     Evaluation --> Results([Results & Conclusions])
 
-    style Dataset fill:#4d5a77,stroke:#1b263b,stroke-width:2px,color:#ffffff
-    style Results fill:#ffd166,stroke:#f4a261,stroke-width:2px,color:#000000
-    style LogReg fill:#f4a261,stroke:#e76f51,stroke-width:2px,color:#ffffff
+    %% Cooler tones with soft contrast
+    style Dataset fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#000000
+    style Results fill:#ecfccb,stroke:#65a30d,stroke-width:2px,color:#000000
+    style LogReg fill:#cffafe,stroke:#0891b2,stroke-width:2px,color:#000000
 
-    classDef eval fill:#457b9d,stroke:#1d3557,stroke-width:2px,color:#ffffff
-    classDef preprocess fill:#2a9d8f,stroke:#264653,stroke-width:2px,color:#ffffff
+    classDef eval fill:#f0f9ff,stroke:#38bdf8,stroke-width:2px,color:#000000
+    classDef preprocess fill:#f0fdfa,stroke:#14b8a6,stroke-width:2px,color:#000000
 
     class Preprocess,EDA,Feature,Split preprocess
     class A,B,C,D,E,F,G eval
+    
 ```
 
 ---
