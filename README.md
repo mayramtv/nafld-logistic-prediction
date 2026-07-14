@@ -166,13 +166,14 @@ The analysis showed that while the model correctly classified most surviving pat
 
 ---
 
-## Lessons Learned
+## Key Takeaways
 
 This project provided practical experience with the complete supervised machine learning workflow while highlighting several important concepts:
 
 - Data preprocessing significantly affects model performance.
-- Medical datasets often contain class imbalance.
+- High accuracy (92.6%) was largely driven by class imbalance.
 - Accuracy alone can be misleading.
+- Recall for deceased patients remained low (10.8%), highlighting the importance of evaluating multiple metrics.
 - Confusion matrices and additional evaluation metrics provide a more complete understanding of classifier performance.
 - Interpreting model limitations is as important as reporting model accuracy.
 
@@ -208,6 +209,12 @@ Possible extensions include:
 Dataset:
 
 https://www.kaggle.com/datasets/utkarshx27/non-alcohol-fatty-liver-disease
+
+---
+
+## Portfolio Update (2026)
+
+This repository was originally completed as part of my undergraduate coursework and later revisited to improve the documentation, reproducibility, and interpretation of the results. The machine learning workflow remains unchanged, while the repository has been reorganized to follow modern GitHub best practices.
 
 ---
 
