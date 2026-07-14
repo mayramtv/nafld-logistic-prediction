@@ -1,12 +1,15 @@
 # NAFLD Mortality Prediction using Logistic Regression
-
-> Machine Learning classification project that predicts patient survival outcomes using clinical data from individuals diagnosed with Non-Alcoholic Fatty Liver Disease (NAFLD).
-
-![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Logistic%20Regression-orange)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
+> Machine Learning classification project that predicts patient survival outcomes using clinical data from individuals diagnosed with Non-Alcoholic Fatty Liver Disease (NAFLD).
+
+<p align="center">
+<img src="./images/workflow.png" width="800" alt="Sustainability NLP pipeline overview">
+</p>
 ---
 
 ## Overview
@@ -30,37 +33,62 @@ Beyond model development, the project emphasizes the importance of selecting app
 
 ```mermaid
 flowchart TD
-    Dataset[Dataset] --- Clean[Data Cleaning]
-    Clean --- EDA[Exploratory Data Analysis]
-    EDA --- Feature[Feature Engineering]
-    Feature --- Split[Train/Test Split]
-    Split --- LogReg[Logistic Regression]
-    LogReg --- Eval[Model Evaluation]
-    Eval --- Results[Results & Conclusions]
+    subgraph Preprocessing["Preprocessing"]
+        Preprocess[Data Preprocessing] --> EDA[Exploratory Data Analysis]
+        EDA --> Feature[Feature Engineering]
+        Feature --> Split[Train/Test Split]
+    end
 
-    style Dataset fill:#f9f,stroke:#333,stroke-width:2px
-    style Results fill:#bbf,stroke:#333,stroke-width:2px
-    style LogReg fill:#ff9,stroke:#333,stroke-width:2px
+    subgraph Modeling["Model"]
+        LogReg[Logistic Regression]
+    end
 
+    subgraph Evaluation["Model Evaluation"]
+        A[Accuracy] --> B[Confusion Matrix]
+        B --> C[Classification Report]
+        C --> D[Balanced Accuracy]
+        D --> E[ROC Curve]
+        E --> F[Precision/Recall Curve]
+        F --> G[Feature Importance]  
+    end
+
+    Dataset([Dataset]) --> Preprocessing
+    Preprocessing --> Modeling
+    Modeling --> Evaluation
+    Evaluation --> Results([Results & Conclusions])
+
+    style Dataset fill:#4d5a77,stroke:#1b263b,stroke-width:2px,color:#ffffff
+    style Results fill:#ffd166,stroke:#f4a261,stroke-width:2px,color:#000000
+    style LogReg fill:#f4a261,stroke:#e76f51,stroke-width:2px,color:#ffffff
+
+    classDef eval fill:#457b9d,stroke:#1d3557,stroke-width:2px,color:#ffffff
+    classDef preprocess fill:#2a9d8f,stroke:#264653,stroke-width:2px,color:#ffffff
+
+    class Preprocess,EDA,Feature,Split preprocess
+    class A,B,C,D,E,F,G eval
 ```
 
 ---
 
 ## Dataset
 
-**Source**
 
-https://www.kaggle.com/datasets/utkarshx27/non-alcohol-fatty-liver-disease
+This project uses the **Non-Alcoholic Fatty Liver Disease (NAFLD)** dataset available on Kaggle. Please refer to the Kaggle dataset page for additional information regarding the data collection and licensing.
+
+- **Source:** https://www.kaggle.com/datasets/utkarshx27/non-alcohol-fatty-liver-disease
+- **File:** `nafld1.csv`
+- **Size:** Approximately 897 KB
 
 Dataset includes demographic and clinical measurements collected from patients diagnosed with NAFLD.
-
 Target variable:
-
 - Life Status
     - Alive
     - Deceased
 
 The original dataset is included in the repository for reproducibility.
+<p align="center">
+<img src="./images/distribution.png" width="800" alt="Sustainability NLP pipeline overview">
+</p>
 
 ---
 
@@ -77,6 +105,15 @@ The original dataset is included in the repository for reproducibility.
 - ROC Curve
 - Precision–Recall Curve
 - Feature Importance visualization
+
+<p align="center">
+<img src="./images/confusion_matrix.png" width="800" alt="Sustainability NLP pipeline overview"><img src="./images/roc_curve.png" width="800" alt="Sustainability NLP pipeline overview">
+</p>
+<p align="center">
+  <img src="./images/confusion_matrix.png" width="33%" alt="Confusion Matrix">
+  <img src="./images/roc_curve.png" width="33%" alt="ROC Curve">
+  <img src="./images/feature_importance.png" width="33%" alt="Feature Importance">
+</p>
 
 ---
 
